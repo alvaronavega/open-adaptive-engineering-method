@@ -37,6 +37,7 @@ Current available Skills include:
 - `reorganize-existing-project`
 - `audit-documentation`
 - `oaem-help`
+- `retrospective`
 
 ## Adoption focus for existing repositories
 

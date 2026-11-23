@@ -39,6 +39,11 @@ Use the minimum sufficient method.
 - “I’m moving to another machine/session” → handoff-context
 - “Can I call this done?” → verify-evidence → verify-completion
 - “Should I ask a human?” → human-boundary
+- “The methodology caused a problem.” → retrospective
+- “I think this Skill selected the wrong path.” → retrospective
+- “The agent stopped too early.” → retrospective
+- “The adapter lost project context.” → retrospective
+- “This generated too much documentation.” → retrospective
 
 ## Composition Guidance
 
@@ -111,9 +116,9 @@ Methodology rules are identical for both.
 
 ## Future-Learning Note
 
-If user reports OAEM inconsistency/problem, recommend recording for future continuous-learning/retrospective flow.
+If user reports OAEM inconsistency/problem, route to `retrospective` and classify candidate defect type (method/skill/adapter/harness/documentation/adoption configuration) based on available evidence.
 
-Do not implement retrospective behavior in this skill.
+Keep oaem-help as a router; do not duplicate retrospective execution logic in this skill.
 
 ## Compliance
 
