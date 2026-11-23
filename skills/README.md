@@ -23,9 +23,6 @@ Skills support OAEM, but they do not define OAEM core principles by themselves.
 OAEM now includes initial core and adoption-oriented Skill contracts for practical use in existing projects.
 
 Current available Skills include:
-- `assess-project`
-- `adopt-oaem`
-- `reorganize-existing-project`
 - `grill-requirement`
 - `classify-change`
 - `slice-vertically`
@@ -35,6 +32,11 @@ Current available Skills include:
 - `human-boundary`
 - `checkpoint-work`
 - `handoff-context`
+- `assess-project`
+- `adopt-oaem`
+- `reorganize-existing-project`
+- `audit-documentation`
+- `oaem-help`
 
 ## Adoption focus for existing repositories
 
