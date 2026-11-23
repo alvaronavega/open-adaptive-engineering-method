@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+  <title id="title">OAEM — Open Adaptive Engineering Method</title>
+  <desc id="desc">Banner with OAEM title, tagline and adaptive engineering loop: Intent, Adapt, Execute, Evidence, Decide, Learn.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1530" />
+      <stop offset="100%" stop-color="#0f2746" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <style>
+      .title { font: 700 68px 'Segoe UI', Roboto, Arial, sans-serif; fill: #f4f8ff; letter-spacing: 1px; }
+      .subtitle { font: 500 26px 'Segoe UI', Roboto, Arial, sans-serif; fill: #b8c7de; }
+      .tagline { font: 500 18px 'Segoe UI', Roboto, Arial, sans-serif; fill: #d5e6ff; }
+      .node { fill: #112a4a; stroke: #2dd4bf; stroke-width: 2; }
+      .nodeText { font: 600 13px 'Segoe UI', Roboto, Arial, sans-serif; fill: #dff8ff; text-anchor: middle; dominant-baseline: middle; }
+      .flow { stroke: url(#accent); stroke-width: 2.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .soft { fill: #7dd3fc; opacity: 0.12; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="360" rx="16" fill="url(#bg)" />
+
+  <circle class="soft" cx="1290" cy="70" r="90" />
+  <circle class="soft" cx="180" cy="320" r="120" />
+
+  <text class="title" x="72" y="108">OAEM</text>
+  <text class="subtitle" x="74" y="145">Open Adaptive Engineering Method</text>
+  <text class="tagline" x="74" y="186">Model-agnostic • Harness-agnostic • Evidence-driven • Human-governed</text>
+
+  <path class="flow" d="M735,252 C815,182 1008,178 1090,244 C1145,287 1128,328 1050,332 C926,336 792,332 706,300 C662,284 660,266 690,252" />
+  <path class="flow" d="M688,252 L660,252" />
+
+  <g transform="translate(665 232)">
+    <rect class="node" x="-62" y="-22" rx="11" width="124" height="44" />
+    <text class="nodeText" x="0" y="1">Intent</text>
+  </g>
+  <g transform="translate(818 208)">
+    <rect class="node" x="-62" y="-22" rx="11" width="124" height="44" />
+    <text class="nodeText" x="0" y="1">Adapt</text>
+  </g>
+  <g transform="translate(960 214)">
+    <rect class="node" x="-62" y="-22" rx="11" width="124" height="44" />
+    <text class="nodeText" x="0" y="1">Execute</text>
+  </g>
+  <g transform="translate(1092 252)">
+    <rect class="node" x="-62" y="-22" rx="11" width="124" height="44" />
+    <text class="nodeText" x="0" y="1">Evidence</text>
+  </g>
+  <g transform="translate(1020 308)">
+    <rect class="node" x="-62" y="-22" rx="11" width="124" height="44" />
+    <text class="nodeText" x="0" y="1">Decide</text>
+  </g>
+  <g transform="translate(842 304)">
+    <rect class="node" x="-62" y="-22" rx="11" width="124" height="44" />
+    <text class="nodeText" x="0" y="1">Learn</text>
+  </g>
+</svg>
