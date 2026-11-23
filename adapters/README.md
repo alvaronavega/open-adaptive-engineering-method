@@ -2,39 +2,89 @@
 
 ## Purpose
 
-This directory holds harness-specific OAEM adapter profiles and guidance.
+This directory defines OAEM harness-adapter contracts.
 
-Adapters translate OAEM core method expectations into harness/runtime-specific execution behavior.
+Adapters map OAEM methodology behavior into harness/runtime execution behavior while keeping OAEM core provider-neutral.
 
-## What belongs here
+## Critical invariants
 
-- adapter profiles per harness;
-- harness-specific execution mapping notes;
-- constraints/permissions/tooling compatibility documentation;
-- conformance notes for preserving OAEM invariants under each harness.
+- One harness must not silently mutate another harness configuration.
+- OAEM core must not embed provider-specific runtime configuration.
+- Adapter maturity must be declared honestly (no fake operational claims).
 
-## What does not belong here
+## Generic adapter contract (minimum)
 
-- OAEM core method definitions (those belong to methodology/docs);
-- hidden auto-generated configs with no source traceability;
-- silent mutation logic that rewrites other harness configurations.
+Any OAEM-consuming harness should define how it handles:
 
-## v0.1 maturity
+- OAEM Skill discovery
+- project authority discovery
+- context loading strategy
+- skill executor/invocation mechanism
+- tool surface and permissions
+- human-boundary signaling and approval path
+- checkpoint authority
+- push authority
+- release authority
+- timeout/circuit-breaker behavior
+- completion signals
+- handoff/resume behavior
+- result normalization
+- evidence capture
 
-Foundation v0.1 defines adapter responsibilities but does not implement full production adapters yet.
+This contract is conceptual and integration-oriented, not a runtime framework implementation.
 
-Only generic directional scaffolding is documented to preserve method portability intent.
+## Harness isolation requirements
 
-## Critical invariant
+Each adapter/profile owns its own:
 
-**One harness must not silently mutate another harness configuration.**
+- executor
+- model/provider selection
+- tools
+- permissions
+- environment assumptions
+- flags
+- limits/timeouts
+- output handling
+- continuation behavior
+- human-approval behavior
 
-Each adapter may own its own:
-- executor and tool surface;
-- model/provider selection;
-- permissions;
-- hooks and timeouts;
-- output parsing and completion signaling;
-- human gate behavior in harness context.
+Cross-harness silent mutation is forbidden.
 
-OAEM core owns none of these provider-specific runtime details.
+## Adapter representations (initial)
+
+| Adapter | Maturity | Notes |
+|---|---|---|
+| generic | CONTRACT_DEFINED | Baseline harness-neutral contract reference. |
+| Ralph | PILOT_REQUIRED | OAEM integration boundary defined; operational verification pending pilot. |
+| Axet | PILOT_REQUIRED | Skill-driven integration expected; executor behavior unverified. |
+| Codex | PILOT_REQUIRED | Contractual mapping only; no operational validation evidence yet. |
+| Claude | PILOT_REQUIRED | Contractual mapping only; no operational validation evidence yet. |
+| Copilot | PILOT_REQUIRED | Contractual mapping only; no operational validation evidence yet. |
+| Gemini | PILOT_REQUIRED | Contractual mapping only; no operational validation evidence yet. |
+
+Allowed maturity states:
+- CONTRACT_DEFINED
+- PILOT_REQUIRED
+- EXECUTOR_UNVERIFIED
+- NOT_YET_IMPLEMENTED
+- OPERATIONALLY_VALIDATED
+
+Use `OPERATIONALLY_VALIDATED` only with explicit real evidence.
+
+## Ralph integration boundary (contractual)
+
+OAEM expects Ralph integration to map:
+
+- story/slice decomposition to OAEM vertical slices;
+- checkpoint behavior distinct from push/release;
+- completion behavior with fail-closed contract;
+- human-boundary behavior for consequential decisions;
+- handoff behavior across context/session/machine changes;
+- retrospective feedback capture for learning loop.
+
+Ralph operational implementation remains harness-specific and out of OAEM core scope.
+
+## v0.1 / pre-pilot posture
+
+Adapters are represented contractually for pilot readiness.
+Operational validation is deferred to real-project pilots.
