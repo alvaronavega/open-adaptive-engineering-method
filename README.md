@@ -1,50 +1,45 @@
-# Open Adaptive Engineering Method (OAEM)
+# OAEM
 
 ![OAEM Banner](assets/oaem-banner.svg)
 
 **English** | [Português (Brasil)](README.pt-BR.md)
 
-OAEM is an open, adaptive, model-agnostic, and harness-agnostic methodology for AI-assisted software engineering.
+---
 
-> [!WARNING]
-> **Project maturity:** Experimental • Early Foundation • v0.1 development
+## Experimental Foundation v0.1
 
-## Mission
+OAEM (Open Adaptive Engineering Method) is an open, adaptive, evidence-driven, human-governed software engineering methodology for AI-assisted development.
 
-Establish a practical software engineering method that works across:
-- different projects and stacks;
-- different programming languages;
-- different AI models and coding agents;
-- different harnesses and operating systems;
-- individual and team workflows;
-- small fixes through high-risk architecture changes.
+## For Humans
 
-## Why OAEM exists
+Understand what OAEM is, why it exists, how to classify changes, select minimum sufficient methodology depth, adopt incrementally, preserve human authority, use autonomous execution safely, and apply checkpoints to reduce risk.
 
-OAEM emerged from long-running practical friction in AI-assisted engineering:
-- too much documentation overhead when depth is not adapted to risk;
-- composable skills without enough governance for completion/evidence decisions;
-- agents stopping one step before implementation;
-- false completion claims without deterministic proof;
-- confusion about when to continue autonomously vs escalate to humans;
-- poor cross-machine reproducibility;
-- multi-agent and multi-harness drift;
-- long autonomous runs without safe local checkpoints.
+[Get Started for Humans](docs/en/getting-started.md#getting-started-for-humans)
 
-Detailed context: [Origin and Motivation](docs/en/origin-and-motivation.md) and [Problems and Failure Modes](docs/en/problems-and-failure-modes.md).
+## For AI Agents
 
-## Core principles
+Bootstrap OAEM-aware execution with stepwise classification, completion contract satisfaction, fault correction, checkpointing, and escalation for human boundaries.
 
-| Principle | Summary |
-|---|---|
-| Adaptive depth | Use the **minimum sufficient artifact** for real risk and complexity. |
-| Evidence over claims | Model confidence is not proof; deterministic checks are authoritative where possible. |
-| Human-governed autonomy | Agents execute bounded engineering work and escalate only at real human boundaries. |
-| Harness isolation | Common methodology contract + isolated harness adapters; no silent cross-harness mutation. |
-| Reproducibility | Fresh-clone conformance is a first-class requirement for method trust. |
-| Continuous learning | Method evolves based on observed friction and classified methodology defects. |
+[Get Started for AI Agents](docs/en/getting-started.md#getting-started-for-ai-agents)
 
-## OAEM method loop
+## Core Principles
+
+- Adapt depth to real risk
+- Vertical by default (horizontal only by demonstrated necessity)
+- Minimum sufficient artifact
+- Evidence over claims
+- Human authority for consequential decisions
+- Fix bounded defects and continue
+- Checkpoint coherent progress
+- One canonical authority per responsibility
+- Harness isolation
+- Fresh-clone reproducibility
+- Model-agnostic core
+- Harness-agnostic core
+- Learn from real use
+- Opinionated but evidence-humble
+
+## OAEM Method Loop
 
 ```mermaid
 flowchart LR
@@ -59,111 +54,51 @@ flowchart LR
     I -. feedback .-> B
 ```
 
-Related: [Methodology Overview](docs/en/methodology-overview.md)
+## Adaptive Depth Overview
 
-## Adaptive depth model (v0.1)
+OAEM chooses the minimum sufficient engineering artifact and rigor based on risk, scope, and complexity.
 
-| Level | Name | Typical scope | Minimal flow |
-|---|---|---|---|
-| 0 | Direct | Local, low-risk, well-understood | intent → implement → focused validation → checkpoint |
-| 1 | Ticket | Medium scoped change | goal → acceptance criteria → implementation → focused regression → checkpoint |
-| 2 | Temporary Spec | Larger bounded change | temporary spec → vertical stories → implementation loop → evidence → completion → retire spec |
-| 3 | Governed Change | Architecture/security/migration/public contract/high-risk | decision artifact → impact analysis → authorized plan → vertical slices → deterministic evidence → human gate |
+## Pain → OAEM Response Summary
 
-Related: [Adaptive Depth](docs/en/adaptive-depth.md)
+OAEM addresses identified practical pains in AI-assisted software engineering such as documentation overhead, false completion claims, unclear human boundaries, cross-machine reproducibility, and others.
 
-## Pain → OAEM response summary
+## Model/Harness Agnostic Architecture
 
-| Recurring pain | OAEM response |
-|---|---|
-| Documentation overhead | Risk-calibrated depth instead of one-size-fits-all process |
-| Skills without governance | Completion contracts + evidence model + decision boundaries |
-| Agents stop early | Explicit execution loops and completion criteria |
-| False completion | Deterministic evidence precedence over model claims |
-| Human-boundary confusion | Formal distinction: bounded defect vs real boundary |
-| Cross-machine failures | Fresh-clone conformance expectations |
-| Multi-harness drift | Shared contract + isolated adapters |
-| Long autonomous runs | Vertical slices + focused validation + checkpoint cadence |
+OAEM core remains independent of specific AI models or agent harnesses, implemented via adapters preserving method invariants.
 
-## Model/harness agnostic architecture
+## Repository Structure
 
-```text
-OAEM CORE
-  ├─ Skills
-  ├─ Templates
-  ├─ Contracts
-  ├─ Evidence model
-  ├─ Completion model
-  ├─ Checkpoint policy
-  ├─ Human-boundary policy
-  ├─ Learning model
-  └─ Adapters
-      ├─ Generic
-      ├─ Ralph
-      ├─ Axet
-      ├─ Codex
-      ├─ Claude
-      ├─ Copilot
-      ├─ Gemini
-      └─ Future harnesses
-```
+- docs/  
+- methodology/  
+- skills/  
+- templates/  
+- adapters/  
+- conformance/  
+- examples/  
+- assets/
 
-OAEM core is **not** defined by any specific vendor, model, IDE, language, framework, or CI platform.
+## Current Maturity
 
-## Repository structure (v0.1 foundation)
+Experimental v0.1 foundation, shaped by practical use and evidence.
 
-```text
-.
-├── assets/
-├── docs/
-│   ├── en/
-│   └── pt-BR/
-├── methodology/
-├── skills/
-├── templates/
-├── adapters/
-│   └── generic/
-├── conformance/
-└── examples/
-```
+## Roadmap
 
-## Current maturity
+- Foundation  
+- Alpha  
+- Beta  
+- Release Candidate  
+- 1.0 Stable
 
-- ✅ Foundation documentation created
-- ✅ Origin, motivation, and failure modes documented
-- ✅ Initial adaptive-depth model defined
-- ✅ Governance/security principles drafted
-- ⏳ Core contracts and conformance tooling pending
+Versioning reflects demonstrated maturity, not appearance.
 
-## Roadmap (no dates)
+## Inspirations and Acknowledgments
 
-See [ROADMAP.md](ROADMAP.md).
-
-- **0.1** Foundation: principles, motivation, failure modes, adaptive-depth model
-- **0.2** Core skills, templates, completion/evidence contracts
-- **0.3** Generic + Ralph adapters
-- **0.4** Axet/Codex/Claude/Copilot/Gemini adapters
-- **0.5** Conformance suite, sample-project validation, cross-harness tests
-- **0.6** Real-project adoption case studies
-- **1.0** Stable methodology contract
-
-## Inspirations and acknowledgments
-
-OAEM was inspired in part by:
-- GitHub Spec Kit
-- Matt Pocock’s *Skills for Real Engineers*
-
-OAEM is not a fork, replacement claim, or endorsement by those projects.  
-Details: [Inspirations](docs/en/inspirations.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+OAEM was inspired in part by [GitHub Spec Kit](https://github.com/github/Spec-Kit) and [Skills for Real Engineers](https://github.com/mattpocock/skills).
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Security and governance boundaries
-
-See [SECURITY.md](SECURITY.md).
-
 ## License
 
-This repository is distributed under the [MIT License](LICENSE).
+MIT License — see [LICENSE](LICENSE).

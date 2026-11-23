@@ -1,50 +1,45 @@
-# Open Adaptive Engineering Method (OAEM)
+# OAEM
 
 ![Banner OAEM](assets/oaem-banner.svg)
 
-[English](README.md) | **Português (Brasil)**
+**English** | [Português (Brasil)](README.pt-BR.md)
 
-OAEM é uma metodologia aberta, adaptativa, agnóstica de modelo e agnóstica de harness para engenharia de software assistida por IA.
+---
 
-> [!WARNING]
-> **Maturidade do projeto:** Experimental • Fundação inicial • desenvolvimento v0.1
+## Fundação Experimental v0.1
 
-## Missão
+OAEM (Open Adaptive Engineering Method) é uma metodologia aberta, adaptativa, orientada por evidências e governada por autoridade humana para engenharia de software assistida por IA.
 
-Estabelecer um método prático de engenharia de software que funcione em:
-- diferentes projetos e stacks;
-- diferentes linguagens de programação;
-- diferentes modelos de IA e agentes de codificação;
-- diferentes harnesses e sistemas operacionais;
-- fluxos de trabalho individuais e em equipe;
-- desde pequenos ajustes até mudanças arquiteturais de alto risco.
+## Para Pessoas
 
-## Por que OAEM existe
+Entenda o que é OAEM, por que existe, como classificar mudanças, escolher a profundidade mínima suficiente, adotar incrementalmente, preservar autoridade humana, usar execução autônoma com segurança e aplicar checkpoints para redução de riscos.
 
-OAEM nasceu de fricções reais e recorrentes em trabalhos longos com engenharia assistida por IA:
-- excesso de documentação quando a profundidade não é adaptada ao risco;
-- Skills composáveis sem governança suficiente para decisões de conclusão/evidência;
-- agentes que param um passo antes da implementação;
-- alegações de conclusão sem prova determinística;
-- confusão entre continuar de forma autônoma vs escalar para humanos;
-- baixa reprodutibilidade entre máquinas;
-- deriva entre múltiplos agentes e múltiplos harnesses;
-- execuções autônomas longas sem checkpoints locais seguros.
+[Primeiros passos para pessoas](docs/pt-BR/getting-started.md#getting-started-for-humans)
 
-Contexto detalhado: [Origem e motivação](docs/pt-BR/origin-and-motivation.md) e [Problemas e modos de falha](docs/pt-BR/problems-and-failure-modes.md).
+## Para Agentes de IA
+
+Bootstrap para execução consciente da OAEM, com classificação passo a passo, satisfação de contrato de conclusão, correção de falhas, checkpoint e escalonamento para fronteiras humanas.
+
+[Primeiros passos para agentes](docs/pt-BR/getting-started.md#getting-started-for-ai-agents)
 
 ## Princípios centrais
 
-| Princípio | Resumo |
-|---|---|
-| Profundidade adaptativa | Usar o **menor artefato suficiente** para o risco e a complexidade reais. |
-| Evidência acima de alegação | Confiança de modelo não é prova; verificações determinísticas são autoritativas quando possíveis. |
-| Autonomia governada por humanos | Agentes executam trabalho técnico delimitado e escalam somente em fronteiras humanas reais. |
-| Isolamento de harness | Contrato metodológico comum + adaptadores isolados; sem mutação silenciosa entre harnesses. |
-| Reprodutibilidade | Conformidade de clone limpo é requisito de primeira classe para confiança no método. |
-| Aprendizado contínuo | O método evolui com base em fricções observadas e defeitos metodológicos classificados. |
+- Adaptar profundidade ao risco real
+- Vertical por padrão (horizontal apenas por necessidade demonstrada)
+- Menor artefato suficiente
+- Evidência acima de alegações
+- Autoridade humana sobre decisões consequenciais
+- Corrigir defeitos delimitados e continuar
+- Checkpoint de progresso coerente
+- Uma autoridade canônica por responsabilidade
+- Isolamento de harness
+- Reprodutibilidade em clone limpo
+- Núcleo agnóstico de modelo
+- Núcleo agnóstico de harness
+- Aprender com uso real
+- Opiniões fortes com humildade orientada por evidências
 
-## Loop do método OAEM
+## Loop metodológico OAEM
 
 ```mermaid
 flowchart LR
@@ -59,111 +54,51 @@ flowchart LR
     I -. feedback .-> B
 ```
 
-Relacionado: [Visão geral da metodologia](docs/pt-BR/methodology-overview.md)
+## Visão geral da profundidade adaptativa
 
-## Modelo de profundidade adaptativa (v0.1)
+OAEM escolhe o menor artefato e rigor de engenharia suficientes baseados em risco, escopo e complexidade.
 
-| Nível | Nome | Escopo típico | Fluxo mínimo |
-|---|---|---|---|
-| 0 | Direto | Local, baixo risco, bem entendido | intenção → implementar → validação focada → checkpoint |
-| 1 | Ticket | Mudança de escopo médio | objetivo → critérios de aceite → implementação → regressão focada → checkpoint |
-| 2 | Especificação temporária | Mudança maior, porém delimitada | especificação temporária → histórias verticais → loop de implementação → evidência → conclusão → aposentar especificação |
-| 3 | Mudança governada | Arquitetura/segurança/migração/contrato público/alto risco | artefato de decisão → análise de impacto → plano autorizado → fatias verticais → evidência determinística → gate humano |
+## Resumo do problema → resposta OAEM
 
-Relacionado: [Profundidade adaptativa](docs/pt-BR/adaptive-depth.md)
+OAEM responde a dores práticas em engenharia assistida por IA, como sobrecarga documental, alegações falsas de conclusão, fronteiras humanas confusas, reprodutibilidade cross-machine, e outras.
 
-## Resumo dor → resposta OAEM
+## Arquitetura agnóstica a modelo/harness
 
-| Dor recorrente | Resposta OAEM |
-|---|---|
-| Sobrecarga documental | Profundidade calibrada por risco, em vez de processo único para tudo |
-| Skills sem governança | Contratos de conclusão + modelo de evidência + fronteiras de decisão |
-| Agentes param cedo | Loops explícitos de execução e critérios de conclusão |
-| Conclusão falsa | Precedência de evidência determinística sobre alegações do modelo |
-| Confusão de fronteira humana | Distinção formal: defeito técnico delimitado vs fronteira humana real |
-| Falhas entre máquinas | Expectativa de conformidade em clone limpo |
-| Deriva entre harnesses | Contrato compartilhado + adaptadores isolados |
-| Execuções longas sem controle | Fatias verticais + validação focada + cadência de checkpoint |
+O núcleo OAEM permanece independente de modelos ou harnesses específicos, implementado via adaptadores que preservam invariantes do método.
 
-## Arquitetura agnóstica de modelo/harness
+## Estrutura do repositório
 
-```text
-NÚCLEO OAEM
-  ├─ Skills
-  ├─ Templates
-  ├─ Contratos
-  ├─ Modelo de evidência
-  ├─ Modelo de conclusão
-  ├─ Política de checkpoint
-  ├─ Política de fronteiras humanas
-  ├─ Modelo de aprendizado
-  └─ Adaptadores
-      ├─ Genérico
-      ├─ Ralph
-      ├─ Axet
-      ├─ Codex
-      ├─ Claude
-      ├─ Copilot
-      ├─ Gemini
-      └─ Harnesses futuros
-```
-
-O núcleo OAEM **não** é definido por fornecedor, modelo, IDE, linguagem, framework ou plataforma de CI específicos.
-
-## Estrutura do repositório (fundação v0.1)
-
-```text
-.
-├── assets/
-├── docs/
-│   ├── en/
-│   └── pt-BR/
-├── methodology/
-├── skills/
-├── templates/
-├── adapters/
-│   └── generic/
-├── conformance/
-└── examples/
-```
+- docs/  
+- methodology/  
+- skills/  
+- templates/  
+- adapters/  
+- conformance/  
+- examples/  
+- assets/
 
 ## Maturidade atual
 
-- ✅ Documentação de fundação criada
-- ✅ Origem, motivação e modos de falha documentados
-- ✅ Modelo inicial de profundidade adaptativa definido
-- ✅ Princípios de governança/segurança definidos
-- ⏳ Contratos centrais e ferramental de conformidade pendentes
+Fundação experimental v0.1, moldada pelo uso prático e evidências.
 
-## Roadmap (sem datas)
+## Roadmap
 
-Consulte [ROADMAP.md](ROADMAP.md).
+- Fundação  
+- Alpha  
+- Beta  
+- Release Candidate  
+- 1.0 Estável
 
-- **0.1** Fundação: princípios, motivação, modos de falha, profundidade adaptativa
-- **0.2** Skills centrais, templates, contratos de conclusão/evidência
-- **0.3** Adaptadores genérico + Ralph
-- **0.4** Adaptadores Axet/Codex/Claude/Copilot/Gemini
-- **0.5** Suíte de conformidade, validação em projeto de exemplo, testes cross-harness
-- **0.6** Estudos de adoção em projetos reais
-- **1.0** Contrato metodológico estável
+Versionamento reflete maturidade demonstrada, não aparência.
 
 ## Inspirações e agradecimentos
 
-OAEM foi inspirado em parte por:
-- GitHub Spec Kit
-- *Skills for Real Engineers*, de Matt Pocock
+OAEM foi inspirado, em parte, pelo [GitHub Spec Kit](https://github.com/github/Spec-Kit) e por [Skills for Real Engineers](https://github.com/mattpocock/skills).
 
-OAEM não é fork, não é reivindicação de substituição e não possui endosso desses projetos.  
-Detalhes: [Inspirações](docs/pt-BR/inspirations.md) e [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+## Contribuindo
 
-## Como contribuir
-
-Consulte [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Segurança e fronteiras de governança
-
-Consulte [SECURITY.md](SECURITY.md).
+Veja [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licença
 
-Este repositório é distribuído sob a [Licença MIT](LICENSE).
+Licença MIT — veja [LICENSE](LICENSE).

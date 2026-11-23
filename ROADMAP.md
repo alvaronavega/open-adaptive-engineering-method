@@ -1,8 +1,8 @@
 # OAEM Roadmap
 
-This roadmap outlines planned methodology evolution phases for OAEM.
+This roadmap outlines the planned methodology evolution phases for OAEM.
 
-No delivery dates are committed at this stage.
+Progression is evidence-driven, with no delivery dates committed.
 
 ## 0.1 — Foundation
 - Mission and scope definition.
@@ -10,34 +10,23 @@ No delivery dates are committed at this stage.
 - Core positioning as a methodology (not a model/harness framework).
 - Initial adaptive depth model.
 
-## 0.2 — Core methodology assets
+## Alpha
 - Core Skills design (method-level, not vendor-locked).
 - Templates for adaptive artifacts by risk level.
-- Completion contract draft.
-- Evidence contract draft.
+- Draft completion and evidence contracts.
 
-## 0.3 — Initial adapters
-- Generic adapter baseline.
-- Ralph adapter baseline.
+## Beta
+- Baseline adapters for generic implementations.
+- Execution and validation flow samples.
+- Compatibility testing across multiple harnesses.
 
-## 0.4 — Expanded harness adapters
-- Axet adapter baseline.
-- Codex adapter baseline.
-- Claude adapter baseline.
-- Copilot adapter baseline.
-- Gemini adapter baseline.
-
-## 0.5 — Conformance and portability
-- Conformance suite baseline.
+## Release Candidate
+- Conformance suite development.
 - Sample-project validation flows.
-- Cross-harness compatibility checks.
+- Evidence of methodology adoption in real projects.
+- Improvements based on real-use feedback and friction analysis.
 
-## 0.6 — Adoption evidence
-- Real-project adoption case studies.
-- Method-defect and adapter-defect trend collection.
-- Improvements based on observed friction.
-
-## 1.0 — Stable methodology contract
+## 1.0 — Stable
 - Stabilized methodology contract.
 - Documented conformance criteria.
 - Versioned compatibility policy for adapters and method assets.

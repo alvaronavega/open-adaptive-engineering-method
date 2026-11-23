@@ -33,6 +33,6 @@ Planned evolution includes:
 - stable method versioning toward OAEM 1.0.
 
 See:
-- [docs/en/methodology-overview.md](../docs/en/methodology-overview.md)
+- [docs/en/methodology.md](../docs/en/methodology.md)
 - [docs/en/completion-contract.md](../docs/en/completion-contract.md)
 - [docs/en/evidence-model.md](../docs/en/evidence-model.md)
