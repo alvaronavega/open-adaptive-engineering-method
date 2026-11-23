@@ -20,33 +20,24 @@ Skills support OAEM, but they do not define OAEM core principles by themselves.
 
 ## v0.1 maturity
 
-No full production OAEM Skill implementations are shipped in foundation v0.1.
+OAEM now includes initial core and adoption-oriented Skill contracts for practical use in existing projects.
 
-At this stage, OAEM documents the role of Skills and the expected direction.
-
-## Early skill roadmap direction (conceptual)
-
-Initial OAEM Skills are expected to include concepts such as:
+Current available Skills include:
 - `assess-project`
 - `adopt-oaem`
 - `reorganize-existing-project`
-- `audit-documentation`
-- `classify-change`
 - `grill-requirement`
+- `classify-change`
 - `slice-vertically`
-- `create-temporary-spec`
-- `implement-slice`
-- `diagnose-defect`
 - `verify-evidence`
-- `checkpoint-work`
 - `verify-completion`
-- `review-change`
-- `retrospective`
+- `diagnose-defect`
+- `human-boundary`
+- `checkpoint-work`
+- `handoff-context`
 
-### Particularly important for existing repositories
+## Adoption focus for existing repositories
 
-- `adopt-oaem`: incrementally introduce OAEM in an existing project.
-- `reorganize-existing-project`: classify source/generated/research/history/vendor content and simplify safely.
-- `audit-documentation`: detect authority overlap, stale documents, duplication, and contradiction.
-
-These are roadmap concepts only in v0.1 foundation.
+- `assess-project`: build evidence-grounded project understanding in read-only mode before consequential changes.
+- `adopt-oaem`: incrementally introduce OAEM by integrating with existing practices first.
+- `reorganize-existing-project`: classify and simplify project structure safely with vertical, checkpointed slices.
